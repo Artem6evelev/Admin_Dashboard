@@ -12,8 +12,8 @@ import salesRoutes from "./routes/sales.js";
 
 /* CONFIGUTATION */
 dotenv.config();
-const app = express();
-app.use(express.json());
+const app = expres();
+app.use(expres.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
@@ -26,3 +26,5 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
+
+/* MONGOOSE SETUP */
